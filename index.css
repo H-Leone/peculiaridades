@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+p {
+  color: white;
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 40em;
+  animation: type 4s steps(60, end);
+  font-weight: bold;
+}
+
+p:nth-child(2) {
+  animation: type2 8s steps(60, end);
+}
+
+p a {
+  color: white;
+  text-decoration: none;
+}
+
+.bar {
+  animation: blink 1s infinite;
+  font-size: 20px;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+::selection {
+  background: black;
+}
+
+.rainbow {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#title {
+    padding: 10px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#qtd-wrapper {
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    transition-duration: .6s;
+    border: none;
+    width: 75px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+#qtd {
+    margin: 10px;
+    padding: 10px;
+}
+
+li {
+    color: white;
+}
+
+#pec-button {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+    transition-duration: .6s;
+}
+
+#pec-button > div {
+    width: 130px;
+    font-weight: bold;
+}
+
+#pec-button:hover {
+    transition-duration: .6s;
+    background-color: rgb(155, 0, 0);
+}
